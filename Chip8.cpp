@@ -400,7 +400,6 @@ bool Chip8::loadApplication(const char * filename) {
     fseek(file, 0, SEEK_END);
     long size = ftell(file);
     rewind(file);
-    printf("Filesize: %d\n", (int)size);
     
     char *buffer = (char *)malloc(sizeof(char) * size);
     if (buffer == NULL) {

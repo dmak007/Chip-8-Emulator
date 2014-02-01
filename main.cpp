@@ -68,60 +68,55 @@ struct Emulator
                 break;
             }
         }
-        if (Keyboard::isKeyPressed(Keyboard::Key::Escape)) running = false;
+        if (Keyboard::isKeyPressed(Keyboard::Escape)) running = false;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::Num1)) chip8.key[0x1] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::Num1)) chip8.key[0x1] = 1;
         else chip8.key[0x1] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::Num2)) chip8.key[0x2] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::Num2)) chip8.key[0x2] = 1;
         else chip8.key[0x2] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::Num3)) chip8.key[0x3] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::Num3)) chip8.key[0x3] = 1;
         else chip8.key[0x3] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::Num4)) chip8.key[0xC] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::Num4)) chip8.key[0xC] = 1;
         else chip8.key[0xC] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::Q)) chip8.key[0x4] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::Q)) chip8.key[0x4] = 1;
         else chip8.key[0x4] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::W)) chip8.key[0x5] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::W)) chip8.key[0x5] = 1;
         else chip8.key[0x5] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::E)) chip8.key[0x6] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::E)) chip8.key[0x6] = 1;
         else chip8.key[0x6] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::R)) chip8.key[0xD] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::R)) chip8.key[0xD] = 1;
         else chip8.key[0xD] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::A)) chip8.key[0x7] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::A)) chip8.key[0x7] = 1;
         else chip8.key[0x7] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::S)) chip8.key[0x8] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::S)) chip8.key[0x8] = 1;
         else chip8.key[0x8] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::D)) chip8.key[0x9] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::D)) chip8.key[0x9] = 1;
         else chip8.key[0x9] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::F)) chip8.key[0xE] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::F)) chip8.key[0xE] = 1;
         else chip8.key[0xE] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::Y) || Keyboard::isKeyPressed(Keyboard::Key::Z)) chip8.key[0xA] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::Y) || Keyboard::isKeyPressed(Keyboard::Z)) chip8.key[0xA] = 1;
         else chip8.key[0xA] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::X)) chip8.key[0x0] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::X)) chip8.key[0x0] = 1;
         else chip8.key[0x0] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::C)) chip8.key[0xB] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::C)) chip8.key[0xB] = 1;
         else chip8.key[0xB] = 0;
         
-        if (Keyboard::isKeyPressed(Keyboard::Key::V)) chip8.key[0xF] = 1;
+        if (Keyboard::isKeyPressed(Keyboard::V)) chip8.key[0xF] = 1;
         else chip8.key[0xF] = 0;
-        
-        if (Keyboard::isKeyPressed(Keyboard::Key::P)) {
-            Image img = window.capture();
-            img.saveToFile("screenshot.png");
-        }
     }
     
     void update() {
